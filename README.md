@@ -1,37 +1,11 @@
 # Overview
 
-https://www.ispyconnect.com/
+https://www.bysec.sk/
 
-iSpy is the world’s most popular open source video surveillance application. It's compatible with the the vast majority of consumer webcams and IP cameras. With more than 2 million users worldwide, iSpy works with more cameras and devices than anything else on the market.
+Our radar video surveillance services are designed to detect intruders at ground level by bouncing radar signals off of all objects in a 100 metr radius in rapid sequence. When a new object enters the area, the radar detects the change and wirelessly employs all available cameras to focus in the direction of the object.
 
-![iSpyInterface](https://www.ispyconnect.com/content/ebook/ispysurface.jpg)
+![alt text](https://github.com/Sirendium/IQ-RVS/blob/master/Logo.png?raw=true)
 
-## About iSpy
-
-Started back in 2007 the software has continually evolved and improved to become a robust, feature rich solution.
-
-The number one use of iSpy is small business security, but home monitoring, neighborhood watch, checking in on the kids, desktop monitoring, nanny-watch and mobile access through a iSpyConnect.com are valued features.
-
-Facial recognition and detection of changes in lighting and audio offer the subtleties that set the software apart from competitors.
-
-Getting started with iSpy is easy: all you need is a webcam or IP camera connected to your computer or network.
-
-iSpy connects to the camera and shows the live view. You can then define specific areas of the video that iSpy should watch for movement, and set a threshold value for the amount of motion that would trigger automatic recording. iSpy can also operate in always-recording or manual-recording modes and supports scheduling and remote access (with an iSpyConnect subscription)
-
-iSpy was designed to provide a low-cost alternative to expensive surveillance systems. It has become a highly scalable application that can be tailored to record and take actions on specific incidents as defined by the user either locally or remotely.
-
-## Installing iSpy
-
-https://www.ispyconnect.com/download.aspx
 
 ## Compiling iSpy
-The 32 bit and 64 bit solutions require **Visual Studio 2015** to build.
-
-For building the Setup project [Wix Toolset 3.10+](http://wixtoolset.org/) must be installed. (Make sure you restart Visual Studio after installing)
-
-To build the full installer compile the Bootstrap32 or Bootstrap64 project
-If there is an error finding a merge module building the setup project then the merge modules are available in the Merge Modules directory
-
-
-If you have dll reference errors when building you may need to go into the DLLS folder and right-click - unblock the DLLs. (Windows Security issue)
-
+https://github.com/MapWindow/MapWinGIS/releases/tag/v4.9.3.6 - To use RVS, you need to install the package - MapWinGis, preferably version 4.9.3.6
