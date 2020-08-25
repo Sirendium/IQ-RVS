@@ -1,0 +1,7 @@
+﻿[
+    { "text": "JPEG Source", "value": "", "type": "Header" },
+    { "text": "Username", "value": "", "type": "String", "bindto": "settings.login" },
+    { "text": "Password", "value": "", "type": "Password", "bindto": "settings.password" },
+    { "text": "URL", "value": "", "type": "String", "bindto": "settings.videosourcestring" }
+]
+
