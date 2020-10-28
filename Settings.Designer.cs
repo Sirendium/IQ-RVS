@@ -38,8 +38,6 @@ namespace iSpyApplication
             this.tcTabs = new System.Windows.Forms.TabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.ddlLanguage = new System.Windows.Forms.ComboBox();
             this.txtServerName = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -236,7 +234,6 @@ namespace iSpyApplication
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.llblHelp = new System.Windows.Forms.LinkLabel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.tmrJSUpdate = new System.Windows.Forms.Timer(this.components);
             this.tcTabs.SuspendLayout();
@@ -377,7 +374,9 @@ namespace iSpyApplication
             // tabPage6
             // 
             this.tabPage6.AutoScroll = true;
+            this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage6.Controls.Add(this.tableLayoutPanel1);
+            this.tabPage6.ForeColor = System.Drawing.Color.White;
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage6.Name = "tabPage6";
@@ -385,7 +384,6 @@ namespace iSpyApplication
             this.tabPage6.Size = new System.Drawing.Size(852, 647);
             this.tabPage6.TabIndex = 7;
             this.tabPage6.Text = "Options";
-            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel1
             // 
@@ -395,8 +393,6 @@ namespace iSpyApplication
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.linkLabel2, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.linkLabel1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.ddlLanguage, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.chkCheckForUpdates, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtServerName, 2, 1);
@@ -471,33 +467,10 @@ namespace iSpyApplication
             this.tableLayoutPanel1.Size = new System.Drawing.Size(840, 553);
             this.tableLayoutPanel1.TabIndex = 65;
             // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(407, 6);
-            this.linkLabel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 0);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(99, 13);
-            this.linkLabel2.TabIndex = 54;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Help Translate iSpy";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel2LinkClicked1);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(274, 6);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 0);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(56, 13);
-            this.linkLabel1.TabIndex = 53;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Get Latest";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel1LinkClicked1);
-            // 
             // ddlLanguage
             // 
             this.ddlLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlLanguage.ForeColor = System.Drawing.SystemColors.WindowText;
             this.ddlLanguage.FormattingEnabled = true;
             this.ddlLanguage.Location = new System.Drawing.Point(6, 6);
             this.ddlLanguage.Margin = new System.Windows.Forms.Padding(6);
@@ -1033,7 +1006,9 @@ namespace iSpyApplication
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage1.Controls.Add(this.flowLayoutPanel3);
+            this.tabPage1.ForeColor = System.Drawing.Color.White;
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage1.Name = "tabPage1";
@@ -1041,7 +1016,6 @@ namespace iSpyApplication
             this.tabPage1.Size = new System.Drawing.Size(852, 647);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Colors";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel3
             // 
@@ -1171,7 +1145,9 @@ namespace iSpyApplication
             // tabPage2
             // 
             this.tabPage2.AutoScroll = true;
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage2.Controls.Add(this.tableLayoutPanel2);
+            this.tabPage2.ForeColor = System.Drawing.Color.White;
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage2.Name = "tabPage2";
@@ -1179,7 +1155,6 @@ namespace iSpyApplication
             this.tabPage2.Size = new System.Drawing.Size(852, 647);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Storage";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel2
             // 
@@ -1285,13 +1260,14 @@ namespace iSpyApplication
             // 
             // tabPage13
             // 
+            this.tabPage13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage13.Controls.Add(this.tableLayoutPanel12);
+            this.tabPage13.ForeColor = System.Drawing.Color.White;
             this.tabPage13.Location = new System.Drawing.Point(4, 22);
             this.tabPage13.Name = "tabPage13";
             this.tabPage13.Size = new System.Drawing.Size(852, 647);
             this.tabPage13.TabIndex = 15;
             this.tabPage13.Text = "FTP";
-            this.tabPage13.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel12
             // 
@@ -1329,7 +1305,9 @@ namespace iSpyApplication
             // tabPage4
             // 
             this.tabPage4.AutoScroll = true;
+            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage4.Controls.Add(this.tableLayoutPanel5);
+            this.tabPage4.ForeColor = System.Drawing.Color.White;
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage4.Name = "tabPage4";
@@ -1337,7 +1315,6 @@ namespace iSpyApplication
             this.tabPage4.Size = new System.Drawing.Size(852, 647);
             this.tabPage4.TabIndex = 6;
             this.tabPage4.Text = "Timeouts";
-            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel5
             // 
@@ -1585,11 +1562,13 @@ namespace iSpyApplication
             // tabPage7
             // 
             this.tabPage7.AutoScroll = true;
+            this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage7.Controls.Add(this.label25);
             this.tabPage7.Controls.Add(this.rtbReferrers);
             this.tabPage7.Controls.Add(this.panel2);
             this.tabPage7.Controls.Add(this.rtbAccessList);
             this.tabPage7.Controls.Add(this.panel1);
+            this.tabPage7.ForeColor = System.Drawing.Color.White;
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage7.Name = "tabPage7";
@@ -1597,7 +1576,6 @@ namespace iSpyApplication
             this.tabPage7.Size = new System.Drawing.Size(852, 647);
             this.tabPage7.TabIndex = 8;
             this.tabPage7.Text = "IP Access";
-            this.tabPage7.UseVisualStyleBackColor = true;
             // 
             // label25
             // 
@@ -1669,14 +1647,15 @@ namespace iSpyApplication
             // 
             // tabPage5
             // 
+            this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage5.Controls.Add(this.tableLayoutPanel6);
+            this.tabPage5.ForeColor = System.Drawing.Color.White;
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage5.Size = new System.Drawing.Size(852, 647);
             this.tabPage5.TabIndex = 9;
             this.tabPage5.Text = "Talk";
-            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel6
             // 
@@ -1728,15 +1707,16 @@ namespace iSpyApplication
             // 
             // tabPage8
             // 
+            this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage8.Controls.Add(this.tblJoystick);
             this.tabPage8.Controls.Add(this.tableLayoutPanel8);
+            this.tabPage8.ForeColor = System.Drawing.Color.White;
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage8.Size = new System.Drawing.Size(852, 647);
             this.tabPage8.TabIndex = 10;
             this.tabPage8.Text = "Joysticks";
-            this.tabPage8.UseVisualStyleBackColor = true;
             // 
             // tblJoystick
             // 
@@ -2094,14 +2074,15 @@ namespace iSpyApplication
             // 
             // tabPage9
             // 
+            this.tabPage9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage9.Controls.Add(this.tableLayoutPanel7);
+            this.tabPage9.ForeColor = System.Drawing.Color.White;
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage9.Size = new System.Drawing.Size(852, 647);
             this.tabPage9.TabIndex = 11;
             this.tabPage9.Text = "Messaging";
-            this.tabPage9.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel7
             // 
@@ -2275,13 +2256,14 @@ namespace iSpyApplication
             // 
             // tabPage12
             // 
+            this.tabPage12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage12.Controls.Add(this.tableLayoutPanel11);
+            this.tabPage12.ForeColor = System.Drawing.Color.White;
             this.tabPage12.Location = new System.Drawing.Point(4, 22);
             this.tabPage12.Name = "tabPage12";
             this.tabPage12.Size = new System.Drawing.Size(852, 647);
             this.tabPage12.TabIndex = 14;
             this.tabPage12.Text = "SMTP";
-            this.tabPage12.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel11
             // 
@@ -2457,13 +2439,14 @@ namespace iSpyApplication
             // 
             // tabPage10
             // 
+            this.tabPage10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage10.Controls.Add(this.tableLayoutPanel9);
+            this.tabPage10.ForeColor = System.Drawing.Color.White;
             this.tabPage10.Location = new System.Drawing.Point(4, 22);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Size = new System.Drawing.Size(852, 647);
             this.tabPage10.TabIndex = 12;
             this.tabPage10.Text = "Connection Alerts";
-            this.tabPage10.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel9
             // 
@@ -2592,13 +2575,14 @@ namespace iSpyApplication
             // 
             // tabPage11
             // 
+            this.tabPage11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage11.Controls.Add(this.tableLayoutPanel3);
+            this.tabPage11.ForeColor = System.Drawing.Color.White;
             this.tabPage11.Location = new System.Drawing.Point(4, 22);
             this.tabPage11.Name = "tabPage11";
             this.tabPage11.Size = new System.Drawing.Size(852, 647);
             this.tabPage11.TabIndex = 13;
             this.tabPage11.Text = "Plugins";
-            this.tabPage11.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel3
             // 
@@ -2671,14 +2655,15 @@ namespace iSpyApplication
             // 
             // tabPage14
             // 
+            this.tabPage14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage14.Controls.Add(this.tableLayoutPanel10);
+            this.tabPage14.ForeColor = System.Drawing.Color.White;
             this.tabPage14.Location = new System.Drawing.Point(4, 22);
             this.tabPage14.Name = "tabPage14";
             this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage14.Size = new System.Drawing.Size(852, 647);
             this.tabPage14.TabIndex = 16;
             this.tabPage14.Text = "Logging";
-            this.tabPage14.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel10
             // 
@@ -2825,23 +2810,10 @@ namespace iSpyApplication
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1Click);
             // 
-            // llblHelp
-            // 
-            this.llblHelp.AutoSize = true;
-            this.llblHelp.Location = new System.Drawing.Point(719, 8);
-            this.llblHelp.Margin = new System.Windows.Forms.Padding(6, 8, 6, 0);
-            this.llblHelp.Name = "llblHelp";
-            this.llblHelp.Size = new System.Drawing.Size(29, 13);
-            this.llblHelp.TabIndex = 91;
-            this.llblHelp.TabStop = true;
-            this.llblHelp.Text = "Help";
-            this.llblHelp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblHelp_LinkClicked);
-            // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.button1);
             this.flowLayoutPanel2.Controls.Add(this.button2);
-            this.flowLayoutPanel2.Controls.Add(this.llblHelp);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 676);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
@@ -2859,7 +2831,7 @@ namespace iSpyApplication
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(866, 719);
             this.Controls.Add(this.tcTabs);
             this.Controls.Add(this.flowLayoutPanel2);
@@ -2986,12 +2958,9 @@ namespace iSpyApplication
         private System.Windows.Forms.TextBox txtServerName;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox ddlLanguage;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.CheckBox chkAutoSchedule;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.LinkLabel llblHelp;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.NumericUpDown numMaxCPU;
         private System.Windows.Forms.TabPage tabPage7;

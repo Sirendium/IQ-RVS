@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using iSpyApplication.Onvif;
 using iSpyApplication.Utilities;
 using iSpyPRO.DirectShow;
+using System.IO;
 
 namespace iSpyApplication.Controls
 {
@@ -166,6 +167,16 @@ namespace iSpyApplication.Controls
                     lbOnvifURLs.Items.Clear();
                     lbOnvifURLs.Items.AddRange(urls.ToArray());
                     lbOnvifURLs.SelectedIndex = 0;
+                    string writePath = "Requst/source.txt";
+                    StreamWriter info_source = new StreamWriter(writePath);
+                    ////////////////////////////////////////////////////
+                    for (int i = 0; i < lbOnvifURLs.Items.Count; i++)
+                    {
+                        info_source.WriteLine(lbOnvifURLs.Items[i]);
+                    }
+
+                    ///////////////////////////////////
+                    info_source.Close();
                     SetPanel(pnlStep2);
                 }
                 else

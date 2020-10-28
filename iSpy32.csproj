@@ -359,6 +359,18 @@
     <Compile Include="AddRemoteCommand.Designer.cs">
       <DependentUpon>AddRemoteCommand.cs</DependentUpon>
     </Compile>
+    <Compile Include="Autorizate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Autorizate.Designer.cs">
+      <DependentUpon>Autorizate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calibration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calibration.Designer.cs">
+      <DependentUpon>Calibration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cloud\Box.cs" />
     <Compile Include="Cloud\Flickr.cs" />
     <Compile Include="Cloud\OneDrive.cs" />
@@ -383,6 +395,12 @@
       <DependentUpon>HelpForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Log.cs" />
+    <Compile Include="Menu_Status.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menu_Status.Designer.cs">
+      <DependentUpon>Menu_Status.cs</DependentUpon>
+    </Compile>
     <Compile Include="Onvif\Behaviour\CustomAddressHeader.cs" />
     <Compile Include="Onvif\Behaviour\CustomEndpointBehavior.cs" />
     <Compile Include="Onvif\Behaviour\CustomMessageInspector.cs" />
@@ -398,6 +416,12 @@
     </Compile>
     <Compile Include="PlayerVLC.Designer.cs">
       <DependentUpon>PlayerVLC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Records.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Records.Designer.cs">
+      <DependentUpon>Records.cs</DependentUpon>
     </Compile>
     <Compile Include="Service References\OnvifServices\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -859,6 +883,18 @@
     <Compile Include="Sources\Audio\talk\TalkFoscam.cs" />
     <Compile Include="Sources\Video\VideoBase.cs" />
     <Compile Include="Sources\Video\VLCStream.cs" />
+    <Compile Include="Status.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Status.Designer.cs">
+      <DependentUpon>Status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Status_RVS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Status_RVS.Designer.cs">
+      <DependentUpon>Status_RVS.cs</DependentUpon>
+    </Compile>
     <Compile Include="VideoSource.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2227,6 +2263,23 @@
     <None Include="Resources\icons8-v-live-64.png" />
     <None Include="Resources\icons8-переключатель-выкл-64.png" />
     <None Include="Resources\icons8-радиовышка-64.png" />
+    <None Include="Resources\icons8-radar-64.png" />
+    <None Include="Resources\icons8-radar-641.png" />
+    <None Include="Resources\icons8-настройки-64.png" />
+    <None Include="Resources\Steam.png" />
+    <None Include="Resources\icons8-документы-641.png" />
+    <None Include="Resources\icons8-массовое-редактирование-641.png" />
+    <None Include="Resources\icons8-резервное-копирование-базы-данных-64.png" />
+    <None Include="Resources\Logo-BYSEC-IP-black-e15593137481531.png" />
+    <None Include="Resources\icons8-info-64.png" />
+    <None Include="Resources\fdfdf.png" />
+    <None Include="Resources\icons8-connection-status-on-64 %281%29.png" />
+    <None Include="Resources\icons8-connection-status-on-64.png" />
+    <None Include="Resources\icons8-connection-status-on-64 %281%291.png" />
+    <None Include="Resources\icons8-цилиндрическая-камера-643.png" />
+    <None Include="Resources\icons8-определение-спутников-641.png" />
+    <None Include="Resources\icons8-редактирование-карты-641.png" />
+    <None Include="Resources\icons8-резервное-копирование-базы-данных-641.png" />
     <Content Include="Untitled-1.ico" />
     <Content Include="XML\Translations.xml">
       <SubType>Designer</SubType>
@@ -2504,6 +2557,12 @@
     <EmbeddedResource Include="AddRemoteCommand.resx">
       <DependentUpon>AddRemoteCommand.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Autorizate.resx">
+      <DependentUpon>Autorizate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calibration.resx">
+      <DependentUpon>Calibration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CommandButtons.resx">
       <DependentUpon>CommandButtons.cs</DependentUpon>
     </EmbeddedResource>
@@ -2643,6 +2702,9 @@
     <EmbeddedResource Include="LayoutEditor.resx">
       <DependentUpon>LayoutEditor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Status.resx">
+      <DependentUpon>Menu_Status.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Merger.resx">
       <DependentUpon>Merger.cs</DependentUpon>
     </EmbeddedResource>
@@ -2728,11 +2790,20 @@
     <EmbeddedResource Include="PTZTool.resx">
       <DependentUpon>PTZTool.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Records.resx">
+      <DependentUpon>Records.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ShareCamera.resx">
       <DependentUpon>ShareCamera.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SSLConfig.resx">
       <DependentUpon>SSLConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Status.resx">
+      <DependentUpon>Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Status_RVS.resx">
+      <DependentUpon>Status_RVS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TagConfigure.resx">
       <DependentUpon>TagConfigure.cs</DependentUpon>

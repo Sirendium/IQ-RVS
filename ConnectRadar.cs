@@ -8,28 +8,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net;
-using System.Text;
+
 using System.Threading;
 using System.Windows.Forms;
 using NsrRadarSdk;
 using NsrRadarSdk.NsrTypes;
 using System.IO;
-
 namespace iSpyApplication
 {
     public partial class ConnectRadar : Form
     {
         NsrRadar _radarSelected;
-
         private ConcurrentDictionary<string, NsrRadar> _radars;
         public ConnectRadar()
         {
             InitializeComponent();
             dataGridView1.AutoGenerateColumns = false;
             _radars = new ConcurrentDictionary<string, NsrRadar>();
-            NsrSdk.Instance.Init(9000, false); // int localPort,bool useTcp
+            NsrSdk.Instance.Init(9000, true); // int localPort,bool useTcp
             NsrSdk.Instance.Timeout = 3000; // //Получить или установить время ожидания (мс) для получения сообщения с радара.
-
             try
             {
                 NsrSdk.Instance.StartReceiveBroadcast(RadarBroadcast);
@@ -38,14 +35,11 @@ namespace iSpyApplication
             {
                 MessageBox.Show(ex.ToString());
             }
-
             NsrSdk.Instance.TargetDetect += FormTestRadar_TargetDetect; // Распознования объекта
             NsrSdk.Instance.RadarOnlineStateChanged += _manager_RadarConnect;
-
             dataGridView1.AutoGenerateColumns = false;
+
             UpdateRadars();
-
-
             
         }
         private void RadarBroadcast(NsrRadar radar, ref RVS_PARAM_BROADCAST info)
@@ -54,7 +48,7 @@ namespace iSpyApplication
             {
                 try
                 {
-                    // radar.Connect();
+                     radar.Connect();
                 }
                 catch (Exception)
                 {
@@ -72,9 +66,6 @@ namespace iSpyApplication
             }));
         }
 
-
-
-
         void UpdateRadars()
         {
             dataGridView1.DataSource = _radars.Values;
@@ -88,7 +79,7 @@ namespace iSpyApplication
                 UpdateRadars();
             }));
         }
-
+  
         /// <summary>
         /// format target info and append to the textbox
         /// </summary>
@@ -101,23 +92,23 @@ namespace iSpyApplication
 
             foreach (var item in targetList.Targets)
             {
+               
                 sb.AppendLine(string.Format("X=\t{0}\t, Y=\t{1}\t, Time\t{2}", item.X.ToString("F2"),
-                    item.Y.ToString("F2"), now.ToString()));
+                item.Y.ToString("F2"), now.ToString()));
+                TextInfo.Text = sb.ToString();
                 
             }
-          
             //////////////////////////////////////////
             StreamReader f1 = new StreamReader("InfoBOX.txt");
             string info_box = f1.ReadToEnd();
             f1.Close();
-            info_box = sb.ToString();
+            info_box += sb.ToString();
             ///////////////////////////////////
             StreamWriter f = new StreamWriter("InfoBOX.txt", true);
-            f.WriteLine(info_box);
+            f.WriteLine(info_box);  
             f.Close();
             ////////////////////////////////
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -126,6 +117,7 @@ namespace iSpyApplication
                 {
                     MessageBox.Show("Please select alarm radar)");
                     return;
+                    
                 }
                 int nHeartTime = int.Parse(radar_HeartTime.Text);
 
@@ -151,14 +143,10 @@ namespace iSpyApplication
                 Log.Error(ex.ToString());
             }
         }
-
-
         public void Draw_radar_vision()
         {
 
         }
-
-
         public void button2_Click(object sender, EventArgs e)
         {
           
@@ -182,22 +170,14 @@ namespace iSpyApplication
                 pts[2].Y = float.Parse(qqTextBoxEx_radar_y3.Text);
                 pts[3].X = float.Parse(qqTextBoxEx_radar_x4.Text);
                 pts[3].Y = float.Parse(qqTextBoxEx_radar_y4.Text);
-
                 _radarSelected.SetCoordinate(pts);
                 StreamWriter Area = new StreamWriter("area.txt");
-                Area.WriteLine(Convert.ToString(pts[0].X));
-                Area.WriteLine(Convert.ToString(pts[0].Y));
-                Area.WriteLine(Convert.ToString(pts[1].X));
-                Area.WriteLine(Convert.ToString(pts[1].Y));
-                Area.WriteLine(Convert.ToString(pts[2].X));
-                Area.WriteLine(Convert.ToString(pts[2].Y));
-                Area.WriteLine(Convert.ToString(pts[3].X));
-                Area.WriteLine(Convert.ToString(pts[3].Y));
+                Area.WriteLine((pts.ToString()));
+         
                 //////////////////////////Area///////////////////
                 Area.Close();
                 select();
                 MessageBox.Show("Set successfully");
-                
             }
             catch (System.Exception ex)
             {
@@ -245,7 +225,7 @@ namespace iSpyApplication
                 if (e.RowIndex < 0)
                     return;
 
-                textBox7.Clear();
+                textBox7.Clear();   
                 select();
                 return;
             }
@@ -334,12 +314,13 @@ namespace iSpyApplication
             {
                 IPAddress ip = IPAddress.Parse(textBox12.Text);
                 int port = int.Parse(textBox10.Text);
-
                 NsrRadar radar = NsrSdk.Instance.CreateRadar(ip.ToString(), port);
                 radar.Connect();
-
                 _radars[radar.Ip] = radar;
                 UpdateRadars();
+                radar.GetFilterCoordinate();
+                textBox7.Text =  radar.GetFilterCoordinate().ToString();
+                MessageBox.Show("Succes!", "Radar ready to using!");
             }
             catch (Exception ex)
             {
@@ -400,6 +381,16 @@ namespace iSpyApplication
         }
 
         private void groupBox_radar_set_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox11_TextChanged(object sender, EventArgs e)
         {
 
         }

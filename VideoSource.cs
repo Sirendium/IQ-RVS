@@ -19,6 +19,7 @@ using iSpyApplication.Utilities;
 using iSpyPRO.DirectShow;
 using Microsoft.Kinect;
 using Rectangle = System.Drawing.Rectangle;
+using System.IO;
 
 namespace iSpyApplication
 {
@@ -438,6 +439,11 @@ namespace iSpyApplication
                     }
 
                     url = cfg.Uri.Uri;
+                    string writePath = "Requst/source_selected.txt";
+                    StreamWriter info_source = new StreamWriter(writePath);
+                    info_source.WriteLine(url);
+                    info_source.Close();
+                    MessageBox.Show("fdf", url);
 
                     CameraLogin = onvifWizard1.txtOnvifUsername.Text;
                     CameraPassword = onvifWizard1.txtOnvifPassword.Text;

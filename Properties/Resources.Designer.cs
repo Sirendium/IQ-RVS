@@ -553,6 +553,16 @@ namespace iSpyApplication.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fdfdf {
+            get {
+                object obj = ResourceManager.GetObject("fdfdf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap files {
             get {
                 object obj = ResourceManager.GetObject("files", resourceCulture);
@@ -853,6 +863,66 @@ namespace iSpyApplication.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_connection_status_on_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-connection-status-on-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_connection_status_on_64__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-connection-status-on-64 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_connection_status_on_64__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-connection-status-on-64 (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_info_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-info-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_radar_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-radar-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_radar_641 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-radar-641", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_v_live_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-v-live-64", resourceCulture);
@@ -913,9 +983,29 @@ namespace iSpyApplication.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_документы_641 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-документы-641", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_массовое_редактирование_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-массовое-редактирование-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_массовое_редактирование_641 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-массовое-редактирование-641", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -963,9 +1053,29 @@ namespace iSpyApplication.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_настройки_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-настройки-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_определение_спутников_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-определение-спутников-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_определение_спутников_641 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-определение-спутников-641", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1006,6 +1116,36 @@ namespace iSpyApplication.Properties {
         internal static System.Drawing.Bitmap icons8_редактирование_карты_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-редактирование-карты-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_редактирование_карты_641 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-редактирование-карты-641", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_резервное_копирование_базы_данных_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-резервное-копирование-базы-данных-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_резервное_копирование_базы_данных_641 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-резервное-копирование-базы-данных-641", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1066,6 +1206,16 @@ namespace iSpyApplication.Properties {
         internal static System.Drawing.Bitmap icons8_цилиндрическая_камера_642 {
             get {
                 object obj = ResourceManager.GetObject("icons8-цилиндрическая-камера-642", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_цилиндрическая_камера_643 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-цилиндрическая-камера-643", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1226,6 +1376,16 @@ namespace iSpyApplication.Properties {
         internal static System.Drawing.Bitmap local {
             get {
                 object obj = ResourceManager.GetObject("local", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_BYSEC_IP_black_e15593137481531 {
+            get {
+                object obj = ResourceManager.GetObject("Logo-BYSEC-IP-black-e15593137481531", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1586,6 +1746,16 @@ namespace iSpyApplication.Properties {
         internal static System.Drawing.Bitmap Steam {
             get {
                 object obj = ResourceManager.GetObject("Steam", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Steam1 {
+            get {
+                object obj = ResourceManager.GetObject("Steam1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

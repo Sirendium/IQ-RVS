@@ -211,6 +211,21 @@ namespace iSpyApplication
         private PictureBox People_Detect;
         private PictureBox ConnectRadar_1;
         private PictureBox pictureBox1;
+        private PictureBox settings;
+        private PictureBox Calibrate;
+        private PictureBox pictureBox2;
+        private PictureBox Info;
+        private System.Windows.Forms.Label label3;
+        private Panel panel7;
+        private Button button4;
+        private System.Windows.Forms.Label label6;
+        private Button button3;
+        private System.Windows.Forms.Label label5;
+        private Button button2;
+        private System.Windows.Forms.Label label4;
+        private Button button1;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
         private AxMapWinGIS.AxMap axMap1;
         
 
@@ -735,8 +750,17 @@ namespace iSpyApplication
             }
             }
 
+            Autorizate f = new Autorizate();
+            f.Show();
+            StreamReader f1 = new StreamReader("Data/position_1.txt");
+           Lat.Text =  Convert.ToString(f1.Read());
+            StreamReader f2 = new StreamReader("Data/position_2.txt");
+            f2.ReadToEnd();
+            lng.Text = f2.ToString();
 
-            
+
+            f1.Close();
+            f2.Close();
         }
 
         private void MainInit()
@@ -2453,6 +2477,18 @@ namespace iSpyApplication
         private void ShowToolstripMenuItemClick(object sender, EventArgs e)
         {
             ShowForm(-1);
+            Autorizate f = new Autorizate();
+            f.ShowDialog();
+            StreamReader f1 = new StreamReader("Data/position_1.txt");
+            Lat.Text =   Convert.ToString(f1.ReadToEnd());
+            f1.Close();
+            StreamReader f2 = new StreamReader("Data/position_2.txt");
+          
+            lng.Text = Convert.ToString(f2.ReadToEnd());
+
+
+          
+            f2.Close();
         }
 
         public void ShowForm(double opacity)
@@ -4172,27 +4208,42 @@ namespace iSpyApplication
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new iSpyApplication.Controls.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.RealZone = new iSpyApplication.Controls.PictureBox();
             this.lng = new System.Windows.Forms.TextBox();
             this.Lat = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.axMap1 = new AxMapWinGIS.AxMap();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.InfoBox = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.pictureBox1 = new iSpyApplication.Controls.PictureBox();
+            this.RealZone = new iSpyApplication.Controls.PictureBox();
             this.ZoomPlus = new iSpyApplication.Controls.PictureBox();
             this.MakeZones = new iSpyApplication.Controls.PictureBox();
             this.ZoomMinus = new iSpyApplication.Controls.PictureBox();
             this.MoveMap = new iSpyApplication.Controls.PictureBox();
-            this.axMap1 = new AxMapWinGIS.AxMap();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.InfoBox = new System.Windows.Forms.TextBox();
             this._pnlCameras = new iSpyApplication.Controls.LayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new iSpyApplication.Controls.PictureBox();
+            this.pictureBox3 = new iSpyApplication.Controls.PictureBox();
+            this.Info = new iSpyApplication.Controls.PictureBox();
+            this.pictureBox2 = new iSpyApplication.Controls.PictureBox();
+            this.settings = new iSpyApplication.Controls.PictureBox();
+            this.Calibrate = new iSpyApplication.Controls.PictureBox();
             this.People_Detect = new iSpyApplication.Controls.PictureBox();
             this.ConnectRadar_1 = new iSpyApplication.Controls.PictureBox();
             this.AddCam = new iSpyApplication.Controls.PictureBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.ctxtMnu.SuspendLayout();
             this.ctxtTaskbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -4200,17 +4251,24 @@ namespace iSpyApplication
             this.splitContainer1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axMap1)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RealZone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ZoomPlus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MakeZones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ZoomMinus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MoveMap)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axMap1)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Info)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.settings)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Calibrate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.People_Detect)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConnectRadar_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddCam)).BeginInit();
@@ -4405,6 +4463,7 @@ namespace iSpyApplication
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel4.Controls.Add(this.panel7);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.axMap1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
@@ -4412,6 +4471,99 @@ namespace iSpyApplication
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(503, 477);
             this.panel4.TabIndex = 21;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.button4);
+            this.panel7.Controls.Add(this.label6);
+            this.panel7.Controls.Add(this.button3);
+            this.panel7.Controls.Add(this.label5);
+            this.panel7.Controls.Add(this.button2);
+            this.panel7.Controls.Add(this.label4);
+            this.panel7.Controls.Add(this.button1);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(0, 392);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(503, 32);
+            this.panel7.TabIndex = 23;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(445, 0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(58, 32);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "Logs";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // label6
+            // 
+            this.label6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label6.Location = new System.Drawing.Point(428, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(17, 32);
+            this.label6.TabIndex = 6;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(213, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(215, 32);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Update to IQ-DASHBOARD";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label5
+            // 
+            this.label5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label5.Location = new System.Drawing.Point(196, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(17, 32);
+            this.label5.TabIndex = 4;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(136, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(60, 32);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Data";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label4.Location = new System.Drawing.Point(119, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(17, 32);
+            this.label4.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(119, 32);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Save position";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // panel5
             // 
@@ -4430,19 +4582,6 @@ namespace iSpyApplication
             this.panel5.TabIndex = 22;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::iSpyApplication.Properties.Resources.icons8_радиовышка_64;
-            this.pictureBox1.Location = new System.Drawing.Point(176, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(44, 53);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.RealZone);
@@ -4455,20 +4594,6 @@ namespace iSpyApplication
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(255, 53);
             this.panel6.TabIndex = 6;
-            // 
-            // RealZone
-            // 
-            this.RealZone.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.RealZone.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RealZone.Dock = System.Windows.Forms.DockStyle.Left;
-            this.RealZone.Image = global::iSpyApplication.Properties.Resources.icons8_геозона_64;
-            this.RealZone.Location = new System.Drawing.Point(0, 0);
-            this.RealZone.Name = "RealZone";
-            this.RealZone.Size = new System.Drawing.Size(44, 53);
-            this.RealZone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.RealZone.TabIndex = 8;
-            this.RealZone.TabStop = false;
-            this.RealZone.Click += new System.EventHandler(this.RealZone_Click);
             // 
             // lng
             // 
@@ -4497,6 +4622,7 @@ namespace iSpyApplication
             this.Lat.TabIndex = 4;
             this.Lat.Tag = "";
             this.Lat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Lat.TextChanged += new System.EventHandler(this.Lat_TextChanged);
             // 
             // label1
             // 
@@ -4519,6 +4645,103 @@ namespace iSpyApplication
             this.label2.Size = new System.Drawing.Size(83, 16);
             this.label2.TabIndex = 6;
             this.label2.Text = "Longitude :";
+            // 
+            // axMap1
+            // 
+            this.axMap1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.axMap1.Enabled = true;
+            this.axMap1.Location = new System.Drawing.Point(0, 0);
+            this.axMap1.Name = "axMap1";
+            this.axMap1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axMap1.OcxState")));
+            this.axMap1.Size = new System.Drawing.Size(503, 392);
+            this.axMap1.TabIndex = 0;
+            this.axMap1.MouseDownEvent += new AxMapWinGIS._DMapEvents_MouseDownEventHandler(this.axMap1_MouseDownEvent);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.InfoBox);
+            this.panel3.Controls.Add(this._pnlCameras);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(463, 477);
+            this.panel3.TabIndex = 20;
+            // 
+            // InfoBox
+            // 
+            this.InfoBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.InfoBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.InfoBox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.InfoBox.ForeColor = System.Drawing.Color.White;
+            this.InfoBox.Location = new System.Drawing.Point(0, 362);
+            this.InfoBox.Multiline = true;
+            this.InfoBox.Name = "InfoBox";
+            this.InfoBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.InfoBox.Size = new System.Drawing.Size(463, 115);
+            this.InfoBox.TabIndex = 20;
+            this.InfoBox.TextChanged += new System.EventHandler(this.InfoBox_TextChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.Info);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.settings);
+            this.panel1.Controls.Add(this.Calibrate);
+            this.panel1.Controls.Add(this.People_Detect);
+            this.panel1.Controls.Add(this.ConnectRadar_1);
+            this.panel1.Controls.Add(this.AddCam);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(966, 44);
+            this.panel1.TabIndex = 21;
+            // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(220, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(555, 44);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Radar Video Surveillance";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::iSpyApplication.Properties.Resources.icons8_radar_641;
+            this.pictureBox1.Location = new System.Drawing.Point(176, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(44, 53);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // RealZone
+            // 
+            this.RealZone.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.RealZone.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RealZone.Dock = System.Windows.Forms.DockStyle.Left;
+            this.RealZone.Image = global::iSpyApplication.Properties.Resources.icons8_геозона_64;
+            this.RealZone.Location = new System.Drawing.Point(0, 0);
+            this.RealZone.Name = "RealZone";
+            this.RealZone.Size = new System.Drawing.Size(44, 53);
+            this.RealZone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RealZone.TabIndex = 8;
+            this.RealZone.TabStop = false;
+            this.RealZone.Click += new System.EventHandler(this.RealZone_Click);
             // 
             // ZoomPlus
             // 
@@ -4572,41 +4795,6 @@ namespace iSpyApplication
             this.MoveMap.TabStop = false;
             this.MoveMap.Click += new System.EventHandler(this.MoveMap_Click);
             // 
-            // axMap1
-            // 
-            this.axMap1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.axMap1.Enabled = true;
-            this.axMap1.Location = new System.Drawing.Point(0, 0);
-            this.axMap1.Name = "axMap1";
-            this.axMap1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axMap1.OcxState")));
-            this.axMap1.Size = new System.Drawing.Size(503, 418);
-            this.axMap1.TabIndex = 0;
-            this.axMap1.MouseDownEvent += new AxMapWinGIS._DMapEvents_MouseDownEventHandler(this.axMap1_MouseDownEvent);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.InfoBox);
-            this.panel3.Controls.Add(this._pnlCameras);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(463, 477);
-            this.panel3.TabIndex = 20;
-            // 
-            // InfoBox
-            // 
-            this.InfoBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.InfoBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.InfoBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.InfoBox.ForeColor = System.Drawing.Color.White;
-            this.InfoBox.Location = new System.Drawing.Point(0, 362);
-            this.InfoBox.Multiline = true;
-            this.InfoBox.Name = "InfoBox";
-            this.InfoBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.InfoBox.Size = new System.Drawing.Size(463, 115);
-            this.InfoBox.TabIndex = 20;
-            this.InfoBox.TextChanged += new System.EventHandler(this.InfoBox_TextChanged);
-            // 
             // _pnlCameras
             // 
             this._pnlCameras.AutoScroll = true;
@@ -4625,17 +4813,91 @@ namespace iSpyApplication
             this._pnlCameras.MouseDown += new System.Windows.Forms.MouseEventHandler(this._pnlCameras_MouseDown);
             this._pnlCameras.Resize += new System.EventHandler(this._pnlCameras_Resize);
             // 
-            // panel1
+            // pictureBox4
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.People_Detect);
-            this.panel1.Controls.Add(this.ConnectRadar_1);
-            this.panel1.Controls.Add(this.AddCam);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(966, 44);
-            this.panel1.TabIndex = 21;
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox4.Image = global::iSpyApplication.Properties.Resources.icons8_резервное_копирование_базы_данных_641;
+            this.pictureBox4.Location = new System.Drawing.Point(308, 0);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(10, 10, 3, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(44, 44);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 33;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox3.Image = global::iSpyApplication.Properties.Resources.icons8_connection_status_on_64;
+            this.pictureBox3.Location = new System.Drawing.Point(264, 0);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(10, 10, 3, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(44, 44);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 32;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // Info
+            // 
+            this.Info.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Info.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Info.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Info.Image = global::iSpyApplication.Properties.Resources.icons8_info_64;
+            this.Info.Location = new System.Drawing.Point(220, 0);
+            this.Info.Margin = new System.Windows.Forms.Padding(10, 10, 3, 3);
+            this.Info.Name = "Info";
+            this.Info.Size = new System.Drawing.Size(44, 44);
+            this.Info.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Info.TabIndex = 31;
+            this.Info.TabStop = false;
+            this.Info.Click += new System.EventHandler(this.Info_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox2.Image = global::iSpyApplication.Properties.Resources.Logo_white_TM;
+            this.pictureBox2.Location = new System.Drawing.Point(775, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(191, 44);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 29;
+            this.pictureBox2.TabStop = false;
+            // 
+            // settings
+            // 
+            this.settings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.settings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.settings.Dock = System.Windows.Forms.DockStyle.Left;
+            this.settings.Image = global::iSpyApplication.Properties.Resources.icons8_настройки_64;
+            this.settings.Location = new System.Drawing.Point(176, 0);
+            this.settings.Margin = new System.Windows.Forms.Padding(10, 10, 3, 3);
+            this.settings.Name = "settings";
+            this.settings.Size = new System.Drawing.Size(44, 44);
+            this.settings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.settings.TabIndex = 28;
+            this.settings.TabStop = false;
+            this.settings.Click += new System.EventHandler(this.settings_Click);
+            // 
+            // Calibrate
+            // 
+            this.Calibrate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Calibrate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Calibrate.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Calibrate.Image = global::iSpyApplication.Properties.Resources.Steam1;
+            this.Calibrate.Location = new System.Drawing.Point(132, 0);
+            this.Calibrate.Margin = new System.Windows.Forms.Padding(10, 10, 3, 3);
+            this.Calibrate.Name = "Calibrate";
+            this.Calibrate.Size = new System.Drawing.Size(44, 44);
+            this.Calibrate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Calibrate.TabIndex = 27;
+            this.Calibrate.TabStop = false;
+            this.Calibrate.Click += new System.EventHandler(this.Calibrate_Click);
             // 
             // People_Detect
             // 
@@ -4682,10 +4944,6 @@ namespace iSpyApplication
             this.AddCam.TabStop = false;
             this.AddCam.Click += new System.EventHandler(this.AddCam_Click);
             // 
-            // toolTip1
-            // 
-            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
-            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -4715,19 +4973,26 @@ namespace iSpyApplication
             this.splitContainer1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axMap1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RealZone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ZoomPlus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MakeZones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ZoomMinus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MoveMap)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axMap1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Info)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.settings)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Calibrate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.People_Detect)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConnectRadar_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddCam)).EndInit();
@@ -4858,7 +5123,6 @@ namespace iSpyApplication
         private DateTime _lastResize = Helper.Now;
         private bool Resizing
         {
-
             get { return _resizing; }
             set
             {
@@ -5124,7 +5388,6 @@ namespace iSpyApplication
         {
             axMap1.CursorMode = MapWinGIS.tkCursorMode.cmMeasure;
             axMap1.Measuring.MeasuringType = MapWinGIS.tkMeasuringType.MeasureArea;
-
             ////////////////////////////////////////////////////
             ////////////////////////////////////////////////////////
             //////////////////////////////////////////////////////
@@ -5140,7 +5403,7 @@ namespace iSpyApplication
             object xPoint;
             object yPoint;
             getRectange(Points_full[0], Points_full[1], Points_full[2], Points_full[3],  out xPoint, out yPoint);
-           
+            InfoBox.Text += "\n Drawing alarm zone;";
         }
 
         private void ZoomPlus_Click(object sender, EventArgs e)
@@ -5164,27 +5427,26 @@ namespace iSpyApplication
             axMap1.Latitude = lat_f;
             axMap1.Longitude = ltn_f;
             axMap1.CurrentZoom = 12;
-
             MessageBox.Show(Convert.ToString(axMap1.Latitude)+"  "+ Convert.ToString(axMap1.Longitude), "");
+            InfoBox.Text += "\n Open geo position;";
         }
 
         private void AddCam_Click(object sender, EventArgs e)
         {
             AddCamera(9);
+            InfoBox.Text += "\n Trying add camera;";
         }
 
         private void ShowMap_Click(object sender, EventArgs e)
         {
 
         }
-
         private void ConnectRadar_1_Click(object sender, EventArgs e)
         {
             ConnectRadar m = new ConnectRadar();
             m.Show();
             connectff = true;
         }
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
@@ -5235,8 +5497,112 @@ namespace iSpyApplication
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            axMap1.CursorMode = MapWinGIS.tkCursorMode.cmAddShape;
-            axMap1.Measuring.MeasuringType = MapWinGIS.tkMeasuringType.MeasureArea;
+            axMap1.Redraw();
+            double x_google_cordinate = Convert.ToDouble(Lat.Text);
+            double y_google_cordinate = Convert.ToDouble(lng.Text);
+            int pixel_size_point = 11;
+            uint color_point = 552;
+            axMap1.DrawPoint(x_google_cordinate, y_google_cordinate, pixel_size_point, color_point);
+            
+
+            Shapefile sf = new Shapefile();
+            axMap1.set_ShapeLayerPointSize(sf, 123);
+            // MWShapeId field will be added to attribute table
+            bool result = sf.CreateNewWithShapeID("", ShpfileType.SHP_POINT);
+
+            // bounding box for the new shapefile
+
+
+            // the location of points will be random
+
+
+            // creating points and inserting them in the shape
+
+            Random rnd = new Random(DateTime.Now.Millisecond);
+            double xMin = 48.496680;
+            double yMin = 37.713100;
+            double xMax = 48.496690;
+            double yMax = 37.713110;
+            for (int i = 0; i < 20; i++)
+            {
+                MapWinGIS.Point pnt = new MapWinGIS.Point();
+                pnt.x = xMin + (xMax - xMin) * rnd.NextDouble();
+                pnt.y = yMin + (yMax - yMin) * rnd.NextDouble();
+                Shape shp = new Shape();
+                shp.Create(ShpfileType.SHP_POINT);
+                int index = 0;
+                shp.InsertPoint(pnt, ref index);
+                sf.EditInsertShape(shp, ref i);
+
+            }
+
+            sf.DefaultDrawingOptions.SetDefaultPointSymbol(tkDefaultPointSymbol.dpsStar);
+
+            // adds shapefile to the map
+            axMap1.AddLayer(sf, true);
+
+            // save if needed
+            //sf.SaveAs(@"c:\points.shp", null);
+
+        }
+
+        private void Lat_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Calibrate_Click(object sender, EventArgs e)
+        {
+            Calibration f = new Calibration();
+            f.Show();
+        }
+
+        private void Info_Click(object sender, EventArgs e)
+        {
+            AboutForm ff = new AboutForm();
+            ff.Show();
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            InfoBox.Text += "\n all data update to IQ-Dashboard;";
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            if(Lat != null && lng != null) { 
+            InfoBox.Text += "\n Geo position saved to database;" + Lat.Text +" , "+lng.Text;
+            
+            StreamWriter ff = new StreamWriter("Data/position_1.txt");
+            ff.Write(Lat.Text);
+            StreamWriter ff1 = new StreamWriter("Data/position_2.txt");
+            ff1.Write(lng.Text);
+
+                ff.Close();
+                ff1.Close();
+            }
+            else
+            {
+                MessageBox.Show("For save cordinate need search your geo position", "For save cordinate need search your geo position");
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Status f = new Status();
+            f.ShowDialog();
+        }
+
+        private void settings_Click(object sender, EventArgs e)
+        {
+            ShowSettings(0);
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Records f = new Records();
+            f.Show();
         }
 
         private void menuItem33_Click(object sender, EventArgs e)

@@ -585,15 +585,15 @@ namespace iSpyApplication
             tabPage4.Text = LocRm.GetString("Timeouts");
             tabPage6.Text = LocRm.GetString("options");
             tabPage7.Text = LocRm.GetString("IPAccess");
-            linkLabel1.Text = LocRm.GetString("GetLatestList");
+            
             Text = LocRm.GetString("settings");
-            linkLabel2.Text = LocRm.GetString("HelpTranslate BYSEC");
+          
             chkAlertWindows.Text = LocRm.GetString("CreateAlertWindow");
             chkOverlay.Text = LocRm.GetString("ShowOverlayControls");
             lblPriority.Text = LocRm.GetString("Priority");
             chkInterrupt.Text = LocRm.GetString("InterruptScreensaverOnAlert");
             label23.Text = LocRm.GetString("JPEGQuality");
-            llblHelp.Text = LocRm.GetString("help");
+           
             label17.Text = LocRm.GetString("IPAccessExplainer");
             chkMonitor.Text = LocRm.GetString("RestartIfCrashed");
             chkGZip.Text = LocRm.GetString("Enable GZip");
@@ -681,7 +681,7 @@ namespace iSpyApplication
             chkEnableLogging.Text = LocRm.GetString("Enable");
             numKeepLogs.Text = LocRm.GetString("KeepLogsForDays");
             numMaxLogSize.Text = LocRm.GetString("MaxFileSizeKB");
-            llblHelp.Visible = linkLabel1.Visible = linkLabel2.Visible = Helper.HasFeature(Enums.Features.View_Ispy_Links);
+           
         }
 
 
